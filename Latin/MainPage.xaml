@@ -1,0 +1,829 @@
+﻿<phone:PhoneApplicationPage
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+	xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800" 
+	x:Class="Latin.MainPage"
+	FontFamily="{StaticResource PhoneFontFamilyNormal}"
+	FontSize="{StaticResource PhoneFontSizeNormal}"
+	Foreground="{StaticResource PhoneForegroundBrush}"
+	SupportedOrientations="Portrait" Orientation="Portrait"
+	shell:SystemTray.IsVisible="False">
+	<phone:PhoneApplicationPage.ApplicationBar>
+		<shell:ApplicationBar>
+			<shell:ApplicationBar.MenuItems>
+				<shell:ApplicationBarMenuItem x:Name="ShareAppBarButton" Text="partage pour aider l'appli" IsEnabled="True" Click="ShareAppBarButton_Click"/>
+			</shell:ApplicationBar.MenuItems>
+			<shell:ApplicationBarIconButton IconUri="/icons/appbar.share.rest.png" Text="partager" Click="ShareAppBarButton_Click"/>
+		</shell:ApplicationBar>
+	</phone:PhoneApplicationPage.ApplicationBar>
+
+	<!--LayoutRoot is the root grid where all page content is placed-->
+	<!--LayoutRoot is the root grid where all page content is placed-->
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<controls:Panorama Title="latin : déclinaisons" Style="{StaticResource PanoramaTemplate}">
+			<controls:PanoramaItem Header="1ère déclinaison" Style="{StaticResource PanoramaItemTemplate}">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="118"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					
+					<TextBlock TextWrapping="Wrap" Text="Singulier" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Pluriel" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" TextDecorations="Underline"/>
+					
+					<TextBlock TextWrapping="Wrap" Text="Nominatif" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Vocatif" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Accusatif" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Génitif" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Datif" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Grid.Row="11" VerticalAlignment="Center" Text="Ablatif" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="a" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="ae" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="a" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="ae" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="am" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="as" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="ae" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="8" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="árum" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="ae" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="10" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="is" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="11" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="ā" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="12" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="ros"/><Run FontWeight="Bold" Text="is" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+				</Grid>
+			</controls:PanoramaItem>
+						<controls:PanoramaItem Header="2ème déclinaison" Style="{StaticResource PanoramaItemTemplate}">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="118"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					
+					<TextBlock TextWrapping="Wrap" Text="Singulier" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Pluriel" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" TextDecorations="Underline"/>
+					
+					<TextBlock TextWrapping="Wrap" Text="Nominatif" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Vocatif" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Accusatif" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Génitif" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Datif" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Grid.Row="11" VerticalAlignment="Center" Text="Ablatif" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="us" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="i" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="e" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="i" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="um" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="os" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="i" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="8" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="órum" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="o" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="10" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="is" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="11" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="o" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="12" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="dómin"/><Run FontWeight="Bold" Text="is" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+				</Grid>
+			</controls:PanoramaItem>
+			<controls:PanoramaItem Header="2ème déclinaison - masculins" Style="{StaticResource PanoramaItemTemplate}">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="118"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					
+					<TextBlock TextWrapping="Wrap" Text="Singulier" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Pluriel" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" TextDecorations="Underline"/>
+					
+					<TextBlock TextWrapping="Wrap" Text="Nominatif" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Vocatif" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Accusatif" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Génitif" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" Text="Datif" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					<TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Grid.Row="11" VerticalAlignment="Center" Text="Ablatif" Grid.RowSpan="2" d:LayoutOverrides="GridBox" TextDecorations="Underline"/>
+					
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="puer"/><Run FontWeight="Bold" Text="" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="púer"/><Run FontWeight="Bold" Text="i" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="puer"/><Run FontWeight="Bold" Text="" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="púer"/><Run FontWeight="Bold" Text="i" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="púer"/><Run FontWeight="Bold" Text="um" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="púer"/><Run FontWeight="Bold" Text="os" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="púer"/><Run FontWeight="Bold" Text="i" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="8" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="púer"/><Run FontWeight="Bold" Text="órum" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="púer"/><Run FontWeight="Bold" Text="o" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="10" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="púer"/><Run FontWeight="Bold" Text="is" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="11" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="púer"/><Run FontWeight="Bold" Text="o" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="12" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="púer"/><Run FontWeight="Bold" Text="is" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+				</Grid>
+			</controls:PanoramaItem>
+			<controls:PanoramaItem Header="2ème déclinaison - neutres" Style="{StaticResource PanoramaItemTemplate}">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="118"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					
+					<TextBlock TextWrapping="Wrap" Text="Singulier" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+					<TextBlock TextWrapping="Wrap" Text="Pluriel" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2"/>
+					
+					<TextBlock TextWrapping="Wrap" Text="Nominatif" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox"/>
+					<TextBlock TextWrapping="Wrap" Text="Vocatif" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox"/>
+					<TextBlock TextWrapping="Wrap" Text="Accusatif" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox"/>
+					<TextBlock TextWrapping="Wrap" Text="Génitif" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox"/>
+					<TextBlock TextWrapping="Wrap" Text="Datif" HorizontalAlignment="Left" Grid.Row="9" VerticalAlignment="Center" Grid.RowSpan="2" d:LayoutOverrides="GridBox"/>
+					<TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Grid.Row="11" VerticalAlignment="Center" Text="Ablatif" Grid.RowSpan="2" d:LayoutOverrides="GridBox"/>
+					
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="um" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="a" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="um" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="a" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="um" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="a" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="i" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="8" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="órum" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="o" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="10" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="is" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox><RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="11" VerticalAlignment="Bottom" Grid.Column="1" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="o" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+					<RichTextBox TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="12" VerticalAlignment="Top" Grid.Column="2" AcceptsReturn="False">
+						<Paragraph><Run Text="templ"/><Run FontWeight="Bold" Text="is" FontSize="25">
+								<Run.Foreground>
+									<SolidColorBrush Color="{StaticResource PhoneAccentColor}">
+										<SolidColorBrush.RelativeTransform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.RelativeTransform>
+										<SolidColorBrush.Transform>
+											<MatrixTransform Matrix="Identity"/>
+										</SolidColorBrush.Transform>
+									</SolidColorBrush>
+								</Run.Foreground>
+							</Run></Paragraph>
+					</RichTextBox>
+				</Grid>
+			</controls:PanoramaItem>
+		</controls:Panorama>
+
+		<!--Panorama control-->
+	</Grid>
+</phone:PhoneApplicationPage>
